@@ -6,7 +6,10 @@ courses = [
         description: "React is a JavaScript library for building user interfaces",
         rating: 4.5,
         is_active: true,
-        category: "JavaScript"
+        category: "JavaScript",
+        tags: [
+            'js', 'react', 'frontend'
+        ]
     },
     {
         name: "Node",
@@ -15,16 +18,22 @@ courses = [
         description: "Node.js is a JavaScript",
         rating: 4.5,
         is_active: true,
-        category: "JavaScript"
+        category: "JavaScript",
+        tags: [
+            'js', 'node', 'backend'
+        ]
     },
     {
         name: "Next",
         price: 250000,
         image: "https://nextjs.org/logo.svg",
         description: "Next.js is a React framework for",
-        rating: 6,
+        rating: 4.5,
         is_active: true,
-        category: "JavaScript"
+        category: "JavaScript",
+        tags: [
+            'js', 'react'
+        ]
     }
 ]
 
@@ -45,7 +54,21 @@ courses = [
 // })
 // console.table(updated_courses)
 
-// find
+// FOREACH: chỉ để loop
+// courses.forEach(x => console.log(x));
+
+// FIND: dùng để tìm kiếm và trả về phần tử thoả điều kiện
 // course = courses.find(x => x.rating > 4)
 // console.info("course", course)
 
+// course  = courses.find(x => x.description.includes("React"))
+// console.info(course)
+
+// MAP - SOME
+check_course_rating = courses.some(x => x.rating > 5)
+console.info(check_course_rating)
+
+
+// MAP - EVERY
+check_course_rating = courses.every(x => x.rating > 4)
+console.info(check_course_rating)
